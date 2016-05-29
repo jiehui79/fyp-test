@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://developer.relayr.io/relayr-browser-sdk.min.js"></script>
+</head>
+<body>
+
+
+</body>
+</html>
+<script>
+
+
+var relayr = RELAYR.init({
+  appId: "fd6eb5e1-681a-414e-83da-5716aa6345e1"
+});
+
+
+//If you have a token and your device ID, you can start listening to your device without going through the login process
+relayr.devices().getDeviceData({
+  token: "Bearer ElcozuTJAmw_8tYA79UGR3WBHy3z7xyW",
+  deviceId:"672c5ce6-d170-4278-a68f-8f5e2b32c124",
+  incomingData: function(data){
+    console.log("data from device", data)
+  }
+});
+
+
+</script>

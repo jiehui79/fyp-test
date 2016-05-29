@@ -1,0 +1,3 @@
+Changes with version 1.0.0 (2016-05-19):
+*) Feature: All API methods are now returning a promise instead of using callbacks.
+*) Feature: Added new CRUD operations for API endpoints
