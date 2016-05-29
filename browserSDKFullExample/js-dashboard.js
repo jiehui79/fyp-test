@@ -1,6 +1,7 @@
 //connect to cloud
 var relayr = RELAYR.init({
     // this comes from the api key page on the dashboard
+    //PROJECT ID from Relayr!!
     appId: "fd6eb5e1-681a-414e-83da-5716aa6345e1",
     // this identifies my website as a 'trusted user' basically- it expects me to show up and ask for access to stuff
     redirectUri: "http://jiehui79.github.io/fyp-test/browserSDKFullExample/html-dashboard.html"
