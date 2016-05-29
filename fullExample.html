@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="./build/relayr-browser-sdk.min.js"></script>
+</head>
+<body>
+
+
+</body>
+</html>
+<script>
+
+
+var relayr = RELAYR.init({
+  appId: "fd6eb5e1-681a-414e-83da-5716aa6345e1",
+  redirectUri:"http://jiehui79.github.io/fyp-test/fullExample.html"
+});
+
+
+relayr.login({
+  success: function(token){
+
+    relayr.devices().getAllDevices(function(devices){
+      console.log("All my devices", devices)
+      var myDeviceId = devices[0].id;
+      relayr.devices().getDeviceData({
+        deviceId: myDeviceId,
+        incomingData: function(data){
+          console.log("deviceData",data);
+        }
+      });
+    });
+  }
+});
+
+</script>
