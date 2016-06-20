@@ -68,7 +68,7 @@ relayr.login({
             }
         });
 
-        // same dance, different device
+        /*// same dance, different device
         relayr.devices().getDeviceData({
             token: token,
             deviceId: "672c5ce6-d170-4278-a68f-8f5e2b32c124",
@@ -76,7 +76,7 @@ relayr.login({
                 dev2 = data.readings[0].value;
                 $(".reading2").text(dev2);
             }
-        });
+        });*/
 
         // displays all of the user's groups
         //get all the devices asstd with an account, the loop is just to dispay them
