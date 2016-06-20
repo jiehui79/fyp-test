@@ -56,7 +56,13 @@ relayr.login({
             deviceId: "672c5ce6-d170-4278-a68f-8f5e2b32c124",
             //function that grabs the reading from the data from the device
             incomingData: function(data) {
-                dev1 = data.readings[0].value[0];
+                dev1 = data.readings[0].value;
+                console.log("all");
+                console.log(data.readings);
+                console.log("zero");
+                console.log(data.readings[0]);
+                console.log("one");
+                console.log(data.readings[1]);
                 //inserts into html
                 $(".reading1").text(dev1);
             }
@@ -67,7 +73,7 @@ relayr.login({
             token: token,
             deviceId: "672c5ce6-d170-4278-a68f-8f5e2b32c124",
             incomingData: function(data) {
-                dev2 = data.readings[0].value[1];
+                dev2 = data.readings[1].value;
                 $(".reading2").text(dev2);
             }
         });
