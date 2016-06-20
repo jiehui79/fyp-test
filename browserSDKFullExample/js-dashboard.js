@@ -67,7 +67,7 @@ relayr.login({
             token: token,
             deviceId: "672c5ce6-d170-4278-a68f-8f5e2b32c124",
             incomingData: function(data) {
-                dev2 = data.readings[1].value
+                dev2 = data.readings[0].value
                 $(".reading2").text(dev2);
             }
         });
