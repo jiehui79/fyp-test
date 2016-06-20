@@ -65,9 +65,9 @@ relayr.login({
         // same dance, different device
         relayr.devices().getDeviceData({
             token: token,
-            deviceId: keys.DEVICE_ID2,
+            deviceId: "672c5ce6-d170-4278-a68f-8f5e2b32c124",
             incomingData: function(data) {
-                dev2 = data.readings[0].value
+                dev2 = data.readings[1].value
                 $(".reading2").text(dev2);
             }
         });
