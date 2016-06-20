@@ -56,7 +56,15 @@ relayr.login({
             deviceId: "672c5ce6-d170-4278-a68f-8f5e2b32c124",
             //function that grabs the reading from the data from the device
             incomingData: function(data) {
-                dev1 = data.readings[0].value;
+                
+                if (data.readings[0].meaning == "Average Power") {
+                    dev1 = data.readings[0].value;
+                }
+                if (data.readings[0].meaning == "Elapsed Seconds") {
+                    dev2 = data.readings[0].value;
+                
+                //dev1 = data.readings[0].value;
+                //dev2 = data.readings[1].value;
                 /*console.log("all");
                 console.log(data.readings);
                 console.log("zero");
@@ -65,6 +73,8 @@ relayr.login({
                 console.log(data.readings[1]);*/
                 //inserts into html
                 $(".reading1").text(dev1);
+                $(".reading2").text(dev2);
+                
             }
         });
 
