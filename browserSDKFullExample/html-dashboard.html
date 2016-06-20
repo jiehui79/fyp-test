@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
-</head>
-<body>
-	<!-- displays info about the user -->
-	<h5>User Email Address</h5>
-		<h6 class="users">__</h6>	
-	<!-- this displays the devices asstd with the account -->
-	<h1>Device</h1>
-    	<h4 class="devices"></h4>
-    <!-- displays readings from the first device -->
-	<h3>reading device 1</h3>
-		<h4 class="reading1">__</h4>
-	<!-- displays readings from the second device -->
 
-	<!-- finally at the end, load the scripts -->
-  <!-- this is the file that holds your sensitive data -->
-  <script src = "api-keys.js"></script>
-  <!-- install jquery and point to it here: -->
-<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-  <script src="../vendor/mqttws31.min.js"></script>
-  <script src="../lib/relayr.js"></script>
-  <script src="js-dashboard.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- displays info about the user -->
+    <h5>User Email Address</h5>
+    <h6 class="users">__</h6>
+    <!-- this displays the devices asstd with the account -->
+    <h1>Device</h1>
+    <h4 class="devices"></h4>
+    <!-- displays readings from the first device -->
+    <h3>reading device 1</h3>
+    <h4 class="reading1">__</h4>
+    <canvas id="random"></canvas>
+    <!-- displays readings from the second device -->
+
+    <!-- finally at the end, load the scripts -->
+    <!-- this is the file that holds your sensitive data -->
+    <script src="api-keys.js"></script>
+    <!-- install jquery and point to it here: -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="../vendor/mqttws31.min.js"></script>
+    <script src="../lib/relayr.js"></script>
+    <script src="js-dashboard.js"></script>
 
 </body>
+
 </html>
