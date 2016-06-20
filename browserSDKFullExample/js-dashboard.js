@@ -62,7 +62,7 @@ relayr.login({
                 }
                 if (data.readings[0].meaning == "Elapsed Seconds") {
                     dev2 = data.readings[0].value;
-                
+                }
                 //dev1 = data.readings[0].value;
                 //dev2 = data.readings[1].value;
                 /*console.log("all");
