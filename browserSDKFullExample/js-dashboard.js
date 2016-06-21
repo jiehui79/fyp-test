@@ -10,8 +10,10 @@ var relayr = RELAYR.init({
 // so I can do multiple device calls at once and not get confused
 var dev1
 var dev2
+var dev3
 var dev1r
 var dev2r
+var dev3r
 
 // in order to do anything other than get straight readings, you have to log in
 relayr.login({
@@ -59,13 +61,18 @@ relayr.login({
                         dev1 = data.readings[0].value;
                         dev1r = Math.round(dev1 * 100) / 100;
                     }
-                    if (data.readings[0].meaning == "Elapsed Seconds") {
+                    if (data.readings[0].meaning == "Duration") {
                         dev2 = data.readings[0].value;
                         dev2r = Math.round(dev2 * 100) / 100;
                     }
+                    if (data.readings[0].meaning == "Watt Hour") {
+                        dev3 = data.readings[0].value;
+                        dev3r = Math.round(dev3 * 100) / 100;
+                    }
                     //inserts into html
-                    $(".reading1").text(dev1r + " Wh");
+                    $(".reading1").text(dev1r + " W");
                     $(".reading2").text(dev2r + " s");
+                    $(".reading3").text(dev3r + " Wh");
                 }
             });
 
