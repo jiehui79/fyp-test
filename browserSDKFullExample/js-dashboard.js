@@ -10,6 +10,8 @@ var relayr = RELAYR.init({
 // so I can do multiple device calls at once and not get confused
 var dev1
 var dev2
+
+// create more variables to store rounded figures
 var dev1r
 var dev2r
 
@@ -63,55 +65,11 @@ relayr.login({
                         dev2 = data.readings[0].value;
                         dev2r = Math.round(dev2 * 100) / 100;
                     }
-                    //dev1 = data.readings[0].value;
-                    //dev2 = data.readings[1].value;
-                    /*console.log("all");
-                    console.log(data.readings);
-                    console.log("zero");
-                    console.log(data.readings[0]);
-                    console.log("one");
-                    console.log(data.readings[1]);*/
                     //inserts into html
                     $(".reading1").text(dev1r + " Wh");
                     $(".reading2").text(dev2r + " s");
-
-                    //
-
-                    var opts = {
-                        lines: 12, // The number of lines to draw
-                        angle: 0.15, // The length of each line
-                        lineWidth: 0.44, // The line thickness
-                        pointer: {
-                            length: 0.9, // The radius of the inner circle
-                            strokeWidth: 0.035, // The rotation offset
-                            color: '#000000' // Fill color
-                        }
-                        , limitMax: 'false', // If true, the pointer will not go past the end of the gauge
-                        colorStart: '#6FADCF', // Colors
-                        colorStop: '#8FC0DA', // just experiment with them
-                        strokeColor: '#E0E0E0', // to see which ones work best for you
-                        generateGradient: true
-                    };
-                    var target = document.getElementById('gaugetest'); // your canvas element
-                    var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
-                    gauge.maxValue = 10; // set max gauge value
-                    gauge.animationSpeed = 32; // set animation speed (32 is default value)
-                    gauge.set(dev1r); // set actual value
-
-                    //
-
                 }
             });
-
-            /*// same dance, different device
-            relayr.devices().getDeviceData({
-                token: token,
-                deviceId: "672c5ce6-d170-4278-a68f-8f5e2b32c124",
-                incomingData: function(data) {
-                    dev2 = data.readings[0].value;
-                    $(".reading2").text(dev2);
-                }
-            });*/
 
             // displays all of the user's groups
             //get all the devices asstd with an account, the loop is just to dispay them
