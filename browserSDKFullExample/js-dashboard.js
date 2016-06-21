@@ -72,8 +72,8 @@ relayr.login({
                     console.log("one");
                     console.log(data.readings[1]);*/
                     //inserts into html
-                    $(".reading1" + " Wh").text(dev1r);
-                    $(".reading2" + " s").text(dev2r);
+                    $(".reading1").text(dev1r + " Wh");
+                    $(".reading2").text(dev2r + " s");
 
                 }
             });
