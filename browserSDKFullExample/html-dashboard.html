@@ -32,18 +32,23 @@
                 <!-- displays readings from the first device -->
                 <li data-role="list-divider">Readings</li>
                 <li>Average Power <span class="ui-li-count reading1">__</span></li>
-                <!-- displays readings from the second device -->
                 <li>Elapsed Seconds <span class="ui-li-count reading2">__</span></li>
+                <!-- displays readings from the second device -->
             </ul>
 
         </div>
 
         <div data-role="footer">
-            <h4>Version 1.0</h4>
+            <h4>Version 1.0a</h4>
         </div>
         <!-- /footer -->
 
     </div>
+    <!-- finally at the end, load the scripts -->
+    <!-- this is the file that holds your sensitive data -->
+    <!--<script src="api-keys.js"></script>
+    <!-- install jquery and point to it here:-->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script src="../vendor/mqttws31.min.js"></script>
     <script src="../lib/relayr.js"></script>
     <script src="js-dashboard.js"></script>

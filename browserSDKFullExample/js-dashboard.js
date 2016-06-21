@@ -10,8 +10,6 @@ var relayr = RELAYR.init({
 // so I can do multiple device calls at once and not get confused
 var dev1
 var dev2
-
-// create more variables to store rounded figures
 var dev1r
 var dev2r
 
